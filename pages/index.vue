@@ -16,7 +16,7 @@
 
       <template v-if="totalQuestions">
         <div v-if="!finished"
-             class="justify-center flex items-center m-3 gap-2"
+             class="justify-center flex items-center gap-1 my-4"
         >
           <span class="sum">{{ flatListOfQuestions[currentIndex].sum }}</span>
           <span><input v-model="flatListOfQuestions[currentIndex].userAnswer"
@@ -42,16 +42,6 @@
         </div>
       </template>
     </div>
-
-    <div class="numberSquare grid grid-cols-10">
-      <template v-for="x in totalGrid">
-        <span v-for="item in grid"
-              class="dot"
-              :class="`dot_${isOdd(x)}`"
-        >&nbsp;</span>
-      </template>
-    </div>
-
     <div v-if="totalQuestions"
          class="m-5"
     >
@@ -64,6 +54,14 @@
     >
       Start Again!
     </button>
+    <div class="numberSquare grid grid-cols-10">
+      <template v-for="x in totalGrid">
+        <span v-for="item in grid"
+              class="dot"
+              :class="`dot_${isOdd(x)}`"
+        >&nbsp;</span>
+      </template>
+    </div>
   </div>
 </template>
 
@@ -161,9 +159,10 @@ export default {
 };
 </script>
  <style lang="scss" scoped>
-  input[type='text'] {
+
+  input[type=number] {
     @apply p-2 rounded border border-gray-300;
-    font-size: 50px;
+    font-size: 40px;
     width: 120px;
     color: #506266;
   }
@@ -172,7 +171,7 @@ export default {
   }
   .sum {
     color: #506266;
-    font-size: 50px;
+    font-size: 40px;
   }
   .numberSquare {
     @apply m-auto;
