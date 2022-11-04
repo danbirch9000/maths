@@ -20,7 +20,7 @@
         >
           <span class="sum">{{ flatListOfQuestions[currentIndex].sum }}</span>
           <span><input v-model="flatListOfQuestions[currentIndex].userAnswer"
-                       type="text"
+                       type="number"
           ></span>
         </div>
         <div class="flex justify-center gap-4">
@@ -176,7 +176,7 @@ export default {
   }
   .numberSquare {
     @apply m-auto;
-    width: 400px;
+    width: 350px;
     span.dot {
       @apply m-3 block rounded-full;
       width: 12px;
