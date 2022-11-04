@@ -36,9 +36,7 @@
       </template>
     </div>
 
-    <div class="helper grid grid-cols-10">
-      <span v-for="item in grid">0</span>
-    </div>
+
 
 
     <div v-if="totalQuestions">
@@ -121,9 +119,9 @@ export default {
       this.currentIndex -= 1;
     },
     reset(){
-      //git remote add origin https://github.com/danbirch9000/maths.git
+      //git remote add origin git@github.com:danbirch9000/maths.git
 
-      //
+      //git remote set-url origin git@github.com:danbirch9000/maths.git
       this.currentIndex = 0;
       this.selectedTimesTables = buildSelectedTimesTables();
     }
