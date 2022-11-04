@@ -43,11 +43,11 @@
       </template>
     </div>
     <div v-if="totalQuestions"
-         class="m-5"
+         class="results m-5 grid grid-cols-2"
     >
-      <div>Correct answers: {{ correctAnswers.length }}</div>
-      <div>Wrong answers: {{ incorrectAnswers.length }}</div>
-      <div>Total questions: {{ totalQuestions }}</div>
+      <div>Correct answers:</div><div> {{ correctAnswers.length }}</div>
+      <div>Wrong answers:</div> <div>{{ incorrectAnswers.length }}</div>
+      <div>Total questions:</div> <div>{{ totalQuestions }}</div>
     </div>
     <button v-if="currentIndex > 0"
             @click.prevent="reset"
@@ -167,11 +167,14 @@ export default {
     color: #506266;
   }
   button {
-    @apply bg-gray-400 p-2 rounded;
+    @apply bg-gray-400 p-2 rounded shadow;
   }
   .sum {
     color: #506266;
     font-size: 40px;
+  }
+  .results {
+    font-size: 20px;
   }
   .numberSquare {
     @apply m-auto;

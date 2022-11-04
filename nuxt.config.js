@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'maths',
+    title: 'Timetables Practice',
     htmlAttrs: {
       lang: 'en'
     },
@@ -45,4 +45,4 @@ export default {
       scss: { sourceMap: false },
     },
   }
-}
+};
